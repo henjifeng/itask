@@ -1,0 +1,11 @@
+// $('.rucaptcha-image-box').html('<%#= j rucaptcha_image_tag %>');
+
+$(document).on("click","img.rucaptcha-image",function() {
+	reLoadRucaptchaImage($(this));
+})
+function reLoadRucaptchaImage(img) {
+	var btn, currentSrc;
+	currentSrc = img.attr('src');
+	img.attr('src', currentSrc.split('?')[0] + '?' + (new Date()).getTime());
+	return false;
+}
