@@ -22,20 +22,20 @@ Things you may want to cover:
 * Deployment instructions
 
 ## Rucaptcha依赖Dalli  Dalli依赖Memcached   没有Memcached的缓存就不能使用Rucaptcha:
-###安装Rucaptcha
+### 安装Rucaptcha
 ```
 gem install Rucaptcha
 ```
-###安装Dalli
+### 安装Dalli
 ```
 gem install Dalli
 ```
-###安装Memcached 和启动
-####Linux CentOs
+### 安装Memcached 和启动
+#### Linux CentOs
 ```
 $ yum install memcached
 $ memcached -d
 ```
 
-##下载代码 git clone  henjifeng:henjifeng/itask.git  使用了别名进行克隆 另外一个地址  git clone  wuhen:WHcoding/blog.git  这是个人的记录 对别人没用
+## 下载代码 git clone  henjifeng:henjifeng/itask.git  使用了别名进行克隆 另外一个地址  git clone  wuhen:WHcoding/blog.git  这是个人的记录 对别人没用
 

@@ -5,6 +5,18 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+#HTML markdown
+gem 'redcarpet'
+gem 'rouge', git: 'https://github.com/stanhu/rouge'
+
+#rails 国际化  本地汉化
+gem 'rails-i18n'
+
+# # admin
+# gem 'rails_admin'
+
+
 #html模板引擎
 gem "slim-rails" #http://slim-lang.com/
 
@@ -28,6 +40,8 @@ gem 'cancancan'
 
 #分页
 gem 'kaminari'
+gem 'kaminari-i18n'
+gem 'awesome_print'
 
 #js相关
 gem 'execjs'

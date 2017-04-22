@@ -12,6 +12,13 @@ class TasksController < ApplicationController
   def show
   end
 
+  def preview
+    @task = {body:"# 测试"}
+    respond_to do |format|
+      format.json
+    end
+  end
+
   # GET /tasks/new
   def new
     @task = Task.new

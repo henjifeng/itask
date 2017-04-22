@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/stanhu/rouge
+  revision: fafe6c111b7273b733908cc73e1ede43a94d5ce2
+  specs:
+    rouge (1.8.0)
+
 GEM
   remote: http://gems.ruby-china.org/
   specs:
@@ -39,6 +45,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    awesome_print (1.7.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
@@ -64,8 +71,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
-    globalid (0.3.7)
-      activesupport (>= 4.1.0)
+    globalid (0.4.0)
+      activesupport (>= 4.2.0)
     i18n (0.8.1)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
@@ -86,6 +93,9 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    kaminari-i18n (0.4.0)
+      kaminari
+      rails
     letter_avatar (0.3.5)
     libv8 (3.16.14.19)
     listen (3.0.8)
@@ -107,7 +117,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     pg (0.20.0)
-    pghero (1.6.4)
+    pghero (1.6.5)
       activerecord
     puma (3.8.2)
     rack (2.0.1)
@@ -130,6 +140,9 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-i18n (5.0.3)
+      i18n (~> 0.7)
+      railties (~> 5.0)
     railties (5.0.2)
       actionpack (= 5.0.2)
       activesupport (= 5.0.2)
@@ -140,6 +153,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    redcarpet (3.4.0)
     ref (2.0.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
@@ -184,7 +198,7 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.13)
+    uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -201,6 +215,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   byebug
   cancancan
   coffee-rails (~> 4.2)
@@ -211,12 +226,16 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
+  kaminari-i18n
   letter_avatar
   listen (~> 3.0.5)
   pg
   pghero
   puma (~> 3.0)
   rails (~> 5.0.1)
+  rails-i18n
+  redcarpet
+  rouge!
   rucaptcha
   sass-rails (~> 5.0)
   slim-rails

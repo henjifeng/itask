@@ -12,8 +12,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     p "注册",params
     @user = User.new(sign_up_params)
     if verify_rucaptcha?(@user) && @user.save
-      sign_in @user
-      redirect_to root_path, notice: 'Sign up successed.'
+      UserMailer.welcome_email(@user).deliver
+      # sign_in @user
+      redirect_to root_path, notice: '注册邮件已经发往你的邮箱  请注意接收'
     else
       @user.errors
 

@@ -29,9 +29,21 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:        "smtp.qq.com",
+    port:           587, 
+    domain:         "qq.com",
+    user_name:      "3506215648",
+    password:       "hpfqusdvccqkdbgd"  #smtp客户端授权密码  http://jingyan.baidu.com/article/3052f5a1ee816d97f31f86b8.html
+  }
+
+
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
