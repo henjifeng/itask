@@ -1,0 +1,19 @@
+zh-CN:
+  dynamic: self
+  common:
+    justnow: '刚刚'
+    hour: '小时'
+    minute: '分钟'
+    edit: "修改"
+    create: "新建"
+    avatar: "头像"
+    save: "保存"
+    saving: "正在保存"
+    submitting: "正在提交"
+    delete: "删除"
+    undelete: "恢复"
+
+en:
+  common:
+    justnow: '测试'
+    hour: 'hour'
