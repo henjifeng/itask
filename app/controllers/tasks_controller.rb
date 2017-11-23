@@ -22,6 +22,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
+    p "task", params
     @task = Task.new
   end
 
