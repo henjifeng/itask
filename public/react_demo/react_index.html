@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>菜鸟教程 React 实例</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+	<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+	<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+      var HelloMessage = React.createClass({
+
+        render: function() {
+          return <h1>Hello {this.props.name}!</h1>;
+        }
+      });
+      var WebSite = React.createClass({
+      	render: function() {
+      		return (
+      			<div>
+      				<Name name = {this.props.name} />
+      				<Link site = {this.props.site} />
+      			</div>
+      		);
+      	}
+      });
+      var Name = React.createClass({
+      	render: function() {
+      		return (
+      			<h1> {this.props.name} </h1>
+      		);
+      	}
+      });
+      var Link = React.createClass({
+      	
+      	render: function() {
+      		return (	
+      			<a href={this.props.site}>
+       				{this.props.site}
+      			</a>
+      		);
+      	}
+      });
+      var LinkButton = React.createClass({
+      	getInitialState: function() {
+      		return {liked: false};
+      	},
+      	handClick: function(event) {
+      		this.setState({ liked: !this.state.liked });
+      	},
+      	render: function() {
+      		var name;
+      		var site;
+      		var text = this.state.liked ? (name="Itask", site="http://www.henjifeng.cc:3000" ): (name="菜鸟教程", site="hhtp://www.runoob.com");
+
+      		console.log(text);
+      		return (
+      			<div>
+      				<WebSite name = {name} site={site} />
+      				<p onClick={this.handClick}> 点我切换网址</p>
+      			</div>
+      		);
+      	}
+      });
+      
+
+      ReactDOM.render(
+      	<div>
+        	<LinkButton name="Itask" site="http://www.henjifeng.cc:3000" />
+        </div>,/*需要加,号分割*/
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
