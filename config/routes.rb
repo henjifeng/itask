@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   	end
   end
 
-  resources wechats do
+  resources :wechats do
     collection do 
       get :get_token
     end
