@@ -8,6 +8,8 @@ set :deploy_to, "/home/wuhen/#{fetch(:application)}"
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'pids', 'tmp/sockets')
 
+set :keep_releases, 5
+
 
 
 # Default branch is :master
