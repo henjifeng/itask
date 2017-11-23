@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :tasks do 
   	collection do 
   	  get :preview
-      get :get_token
+      post :get_token
   	end
   end
 
