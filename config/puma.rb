@@ -51,8 +51,8 @@ plugin :tmp_restart
 
 
 #部署新加文件 
-daemonize true
-pidfile "//var/www/myapp/tmp/pids/puma.pid"
-stdout_redirect "//var/www/myapp/log/stdout", "//var/www/myapp/log/stderr"
-bind "unix:///tmp/deploy.sock"
+# daemonize true
+# pidfile "//var/www/myapp/tmp/pids/puma.pid"
+# stdout_redirect "//var/www/myapp/log/stdout", "//var/www/myapp/log/stderr"
+# bind "unix:///tmp/deploy.sock"
 

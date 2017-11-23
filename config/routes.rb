@@ -7,11 +7,6 @@ Rails.application.routes.draw do
   	end
   end
 
-  resources :wechats do
-    collection do 
-      get :get_token
-    end
-  end
   # devise_for :users
   devise_for :users, controllers: {
   		registrations: 'users/registrations',
@@ -21,5 +16,5 @@ Rails.application.routes.draw do
   root to: "home#index"
   # mount RuCaptcha::Engine => "/rucaptcha"
 
-  get "/:action" => "react#react_index"
+  # get "/:action" => "react#react_index"
 end
