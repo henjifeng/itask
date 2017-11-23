@@ -36,6 +36,7 @@ gem install Dalli
 $ yum install memcached
 $ memcached -d
 ```
+执行 memcached -d 开启缓存
 
 ## 下载代码 git clone  henjifeng:henjifeng/itask.git  使用了别名进行克隆 另外一个地址  git clone  wuhen:WHcoding/blog.git  这是个人的记录 对别人没用
 

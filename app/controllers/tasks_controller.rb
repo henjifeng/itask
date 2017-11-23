@@ -69,6 +69,12 @@ class TasksController < ApplicationController
     end
   end
 
+  # GET /tasks/get_token
+  def get_token
+    p "get_token",params
+    render json:{flag: true,data: "连接测试成功"}
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
